@@ -14,7 +14,10 @@ let storedAccessToken = null;
 
 // STEP 1: Redirect user to LinkedIn for authentication
 app.get("/linkedin/login", (req, res) => {
-  const authUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${LINKEDIN_CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=w_member_social%20r_basicprofile%20w_organization_social`;
+  const authUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${LINKEDIN_CLIENT_ID}&redirect_uri=${encodeURIComponent(
+    REDIRECT_URI
+  )}&scope=w_member_social%20r_basicprofile%20w_organization_social`;
+
   res.redirect(authUrl);
 });
 
