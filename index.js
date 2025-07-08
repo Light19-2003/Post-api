@@ -6,7 +6,7 @@ const app = express();
 // Hardcoded LinkedIn credentials (replace with your own; secure in production)
 const LINKEDIN_CLIENT_ID = "77hcrls6q3cwbc"; // Replace with your LinkedIn app's Client ID
 const LINKEDIN_CLIENT_SECRET = "WPL_AP1.1r5SfEpxXXYW5P6y.88nY9Q=="; // Replace with your LinkedIn app's Client Secret
-const REDIRECT_URI = "http://localhost:3000/linkedin/callback"; // Replace with your redirect URI
+const REDIRECT_URI = "https://post-api-9gwc.onrender.com/linkedin/callback"; // Replace with your redirect URI
 const LINKEDIN_ORG_ID = ""; // Optional: Replace with your LinkedIn Company Page ID for organization posts, or leave empty for personal profile
 
 // In-memory storage for access token (use database like Redis/MongoDB in production)
